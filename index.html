@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudySphere</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-       <style>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
         * {
             margin: 0;
             padding: 0;
@@ -19,7 +21,7 @@
             color: white;
         }
 
-        nav{
+        nav {
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -27,40 +29,67 @@
             height: 70px;
             background-color: rgb(0, 0, 80);
         }
-        nav ul{
+
+        nav ul {
             display: flex;
             justify-content: center;
         }
-        nav ul li{
+
+        nav ul li {
             list-style-type: none;
             margin: 0 23px;
             font-size: 1.25rem;
 
         }
-        .left{
-             font-size: 2rem;
+
+        nav ul li a {
+            text-decoration: none;
+            color: white
         }
-        .firstsection{
+
+        nav ul li a:hover {
+            color: rgb(168, 168, 244);
+            font-size: 1.26rem;
+
+        }
+
+        .left {
+            font-size: 2rem;
+        }
+
+        .firstsection {
             display: flex;
             justify-content: space-around;
             align-items: center;
             margin: 80px 0;
         }
-        .firstsection > div{
+
+        .firstsection>div {
             width: 30%;
         }
-        .leftsection{
-            font-size:  3rem;
+
+        .leftsection {
+            font-size: 2.5rem;
             margin: 70px 0;
         }
-        .rightsection img{
+
+        .leftsection .btn {
+            padding: 12px;
+        }
+
+        .rightsection img {
             width: 80%;
             margin: 50px 0;
         }
-        .purple{
+
+        .purple {
             color: rgb(180, 113, 242);
         }
-       
+
+        #element {
+            color: rgb(180, 113, 242);
+
+        }
     </style>
 </head>
 
@@ -70,10 +99,10 @@
             <div class="left">Study<span class="purple">S</span>phere</div>
             <div class="right">
                 <ul>
-                    <a href=""><li>Home</li></a>
-                    <a href=""><li>Scheme</li></a>
-                    <a href=""><li>About</li></a>
-                    <a href=""><li>Contact Us</li></a>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">Scheme</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Contact Us</a></li>
                 </ul>
             </div>
         </nav>
@@ -82,14 +111,39 @@
     <main>
         <section class="firstsection">
             <div class="leftsection">
-                Hi, We are <span class="purple">VTU</span> students and 
-                <div>we are CSE aspirants</div>
+                Access <span class="purple">Organized</span> notes across various subjects,
+                <div></div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <div class="btn">
+                        <button
+                            style="
+                            background-color: #1e2167; 
+                            color: white; 
+                            border: 2px solid white; 
+                            border-radius: 6px; 
+                            padding: 12px; 
+                            font-size: 20px; 
+                            margin: 0 20px 0 0; 
+                            cursor: pointer;"
+                            >Get Started</button>
+                    </div>
+                </div>
+
             </div>
             <div class="rightsection">
-            <img src="clgstudents.webp" alt="">
+                <img src="clgstudents.webp" alt="">
             </div>
         </section>
     </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Empower', 'Success', 'with best notes'],
+            typeSpeed: 50,
+        });
+    </script>
 
 </body>
 
