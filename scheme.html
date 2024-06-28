@@ -8,7 +8,7 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         crossorigin="anonymous" />
-    <title>StudySphere</title>
+    <title>Scheme</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,8 +16,8 @@
         rel="stylesheet">
     <style>
         * {
-            margin: 0;
-            padding: 0;
+            margin: 0; 
+            padding: 0; 
             box-sizing: border-box;
         }
 
@@ -82,16 +82,6 @@
             width: 30%;
         }
 
-        .leftsection {
-            font-size: 2.5rem;
-            margin: 70px 0;
-        }
-
-        .rightsection img {
-            width: 80%;
-            margin: 50px 0;
-        }
-
         .purple {
             color: blueviolet;
 
@@ -141,6 +131,59 @@
         .navbar-item.dropdown:hover .dropdown-menu {
             display: block;
         }
+
+        /* Container for the main content */
+        .main-container {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+            max-width: 100%;
+            width: 200%;
+        }
+
+        /* Styling for the content inside the container */
+        .content h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #000000;
+        }
+
+        /* Styling for the selection button container */
+        .selection-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Styling for the select dropdown */
+        .selection-button select {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            width: 80%;
+            max-width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /* Styling for the button */
+        .selection-button button {
+            padding: 10px 20px;
+            background: rgb(255, 255, 255);
+            color: black;
+            border: 2px solid black;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Hover effect for the button */
+        .selection-button button:hover {
+            background-color: #c1c1c1;
+        }
     </style>
 </head>
 
@@ -154,7 +197,7 @@
                     <li class="navbar-item dropdown">
                         <a href="#">Scheme</a>
                         <ul class="dropdown-menu">
-                            <li><a href="scheme-1.html">2021 Scheme</a></li>
+                            <li><a href="#">2021 Scheme</a></li>
                             <li><a href="#">2022 Scheme</a></li>
                         </ul>
                     </li>
@@ -166,40 +209,30 @@
     </header>
 
     <main>
-        <section class="firstsection">
-            <div class="leftsection">
-                Access <span class="purple">Organized</span> notes across various subjects,
-                <div></div>
-                <span id="element"></span>
-                <div></div>
-                <div class="btn">
-                    <a href="scheme.html">
-                        <button style="padding: 12px;
-                        background-color: rgb(249, 249, 249);
-                        color: black;
-                        border: 2px solid black;
-                        border-radius: 6px;
-                        font-style: bold;
-                        font-size: 20px;
-                        margin:0 20px 0 0;
-                        cursor: pointer;
-                        transition: background-color 0.3s ease;">Get Started</button>
-                    </a>
+        <div class="main-container">
+            <div class="content">
+                <h1>Select Syllabus <span class="purple">Scheme</span></h1>
+                <div class="selection-button">
+                    <select id="syllabus-scheme">
+                        <option value="" disabled selected>Select Scheme</option>
+                        <option value="scheme-1">2021 Scheme</option>
+                        <option value="scheme-2">2022 Scheme</option>
+                    </select>
+                    <button id="select-button" onclick="redirectToScheme()">Get Syllabus</button>
                 </div>
             </div>
-            <div class="rightsection">
-                <img src="clgstudents.webp" alt="">
-            </div>
-        </section>
+        </div>
+        <script>
+            function redirectToScheme() {
+                const scheme = document.getElementById('syllabus-scheme').value;
+                if (scheme) {
+                    window.location.href = scheme + '.html'; // Redirect to the corresponding syllabus page
+                } else {
+                    alert('Please select a syllabus scheme.');
+                }
+            }
+        </script>
     </main>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <!-- Setup and start animation! -->
-    <script>
-        var typed = new Typed('#element', {
-            strings: ['Empower', 'Success', 'with best notes'],
-            typeSpeed: 50,
-        });
-    </script>
 
 </body>
 
