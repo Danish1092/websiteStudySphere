@@ -14,134 +14,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: ffffff;
-            color: rgb(0, 0, 0);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 20px;
-            height: 80px;
-            background-color: rgb(250, 250, 250);
-            border-bottom: 1px solid #7d7a7a;
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-        }
-
-        nav ul li {
-            list-style-type: none;
-            margin: 0 23px;
-            margin-top: 5%;
-            font-size: 1.25rem;
-
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: rgb(0, 0, 0);
-        }
-
-        nav ul li a:hover {
-            color: rgb(137, 137, 240);
-            font-size: 1.26rem;
-
-        }
-
-        .left {
-            font-size: 2rem;
-        }
-
-        .left a {
-            font-size: 2rem;
-            cursor: pointer;
-            color: #000000;
-            text-decoration: none;
-        }
-
-        .firstsection {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin: 80px 0;
-        }
-
-        .firstsection>div {
-            width: 30%;
-        }
-
-        .leftsection {
-            font-size: 2.5rem;
-            margin: 70px 0;
-        }
-
-        .rightsection img {
-            width: 80%;
-            margin: 50px 0;
-        }
-
-        .purple {
-            color: blueviolet;
-
-        }
-
-        #element {
-            color: blueviolet
-        }
-
-        .dropdown-menu {
-            display: none;
-            /* Initially hidden */
-            position: absolute;
-            /* Absolute positioning relative to the parent */
-            top: 100%;
-            /* Positioned below the parent item */
-            left: 0;
-            background-color: #444;
-            /* Background color of the dropdown */
-            padding: 10px 0;
-            margin: 0;
-            list-style-type: none;
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
-            /* Dropdown shadow */
-        }
-
-        /* Styles for the dropdown menu items */
-        .dropdown-menu li {
-            padding: 0;
-            margin: 0;
-        }
-
-        /* Styles for the links inside the dropdown */
-        .dropdown-menu a {
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            display: block;
-        }
-
-        /* Change color on hover for dropdown links */
-        .dropdown-menu a:hover {
-            background-color: #555;
-        }
-
-        /* Display the dropdown on hover */
-        .navbar-item.dropdown:hover .dropdown-menu {
-            display: block;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -160,6 +33,9 @@
                     <li><a href="/">About</a></li>
                     <li><a href="/">Contact Us</a></li>
                 </ul>
+            </div>
+            <div class="hamburger-menu">
+                <i class="fa fa-bars"></i>
             </div>
         </nav>
     </header>
@@ -192,14 +68,7 @@
         </section>
     </main>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <!-- Setup and start animation! -->
-    <script>
-        var typed = new Typed('#element', {
-            strings: ['Empower', 'Success', 'with best notes'],
-            typeSpeed: 50,
-        });
-    </script>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
