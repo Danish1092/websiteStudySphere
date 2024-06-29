@@ -16,8 +16,8 @@
         rel="stylesheet">
     <style>
         * {
-            margin: 0; 
-            padding: 0; 
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
 
@@ -134,55 +134,110 @@
 
         /* Container for the main content */
         .main-container {
+            width: 100%;
+            max-width: 600px;
             background-color: #fff;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             text-align: center;
-            max-width: 100%;
-            width: 200%;
+            margin: auto;
+            margin-top: 6%;
+            margin-bottom: 20px;
         }
 
         /* Styling for the content inside the container */
         .content h1 {
             margin-bottom: 20px;
             font-size: 24px;
-            color: #000000;
+            color: #333;
         }
 
         /* Styling for the selection button container */
         .selection-button {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            margin-bottom: 20px;
         }
 
         /* Styling for the select dropdown */
         .selection-button select {
             padding: 10px;
             font-size: 16px;
-            margin-bottom: 15px;
             width: 80%;
             max-width: 300px;
             border: 1px solid #ddd;
             border-radius: 5px;
         }
 
-        /* Styling for the button */
-        .selection-button button {
-            padding: 10px 20px;
-            background: rgb(255, 255, 255);
-            color: black;
-            border: 2px solid black;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+        /* Container for semester buttons */
+        .semester-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
         }
 
-        /* Hover effect for the button */
-        .selection-button button:hover {
-            background-color: #c1c1c1;
+        /* Styling for each semester button */
+        .semester-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            color: #fff;
+            background-color: rgb(157, 90, 219);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+            width: 45%;
+            max-width: 200px;
+            margin: 5px 0;
+        }
+
+        /* Hover effect for the semester buttons */
+        .semester-button:hover {
+            background-color: rgb(143, 34, 245);
+            transform: translateY(-5px);
+        }
+
+        /* Styling for the subject section */
+        .subject-section {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: auto;
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
+
+        /* Title for the subject section */
+        .subject-section h2 {
+            margin-bottom: 20px;
+            font-size: 22px;
+            color: #333;
+        }
+
+        /* Styling for each subject button */
+        .subject-button {
+            padding: 15px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+            transition: transform 0.3s, background-color 0.3s;
+            width: 30%;
+            max-width: 250px;
+        }
+
+        /* Hover effect for the subject buttons */
+        .subject-button:hover {
+            background-color: #0068d8;
+            transform: translateY(-5px);
         }
     </style>
 </head>
@@ -197,7 +252,6 @@
                     <li class="navbar-item dropdown">
                         <a href="#">Scheme</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">2021 Scheme</a></li>
                             <li><a href="#">2022 Scheme</a></li>
                         </ul>
                     </li>
@@ -213,23 +267,64 @@
             <div class="content">
                 <h1>Select Syllabus <span class="purple">Scheme</span></h1>
                 <div class="selection-button">
-                    <select id="syllabus-scheme">
+                    <select id="syllabus-scheme" onchange="showSemesters()">
                         <option value="" disabled selected>Select Scheme</option>
-                        <option value="scheme-1">2021 Scheme</option>
-                        <option value="scheme-2">2022 Scheme</option>
+                        <option value="Scheme-2022">2022 Scheme</option>
                     </select>
-                    <button id="select-button" onclick="redirectToScheme()">Get Syllabus</button>
                 </div>
+
+                <!-- Section where semester buttons will appear -->
+                <div id="semester-buttons" class="semester-buttons"></div>
             </div>
         </div>
+
+        <!-- Section where subjects will appear -->
+        <div id="subject-section" class="subject-section"></div>
+
         <script>
-            function redirectToScheme() {
+            function showSemesters() {
                 const scheme = document.getElementById('syllabus-scheme').value;
-                if (scheme) {
-                    window.location.href = scheme + '.html'; // Redirect to the corresponding syllabus page
-                } else {
-                    alert('Please select a syllabus scheme.');
-                }
+                const semesters = ['Semester 1', 'Semester 2', 'Semester 3', 'Semester 4', 'Semester 5', 'Semester 6'];
+                const container = document.getElementById('semester-buttons');
+                const subjectSection = document.getElementById('subject-section');
+
+                // Clear previous buttons and subjects if any
+                container.innerHTML = '';
+                subjectSection.innerHTML = '';
+
+                // Create and append buttons for each semester
+                semesters.forEach((semester, index) => {
+                    const button = document.createElement('button');
+                    button.className = 'semester-button';
+                    button.innerHTML = semester;
+                    button.onclick = () => showSubjects(scheme, index + 1, semester);
+                    container.appendChild(button);
+                });
+            }
+
+            function showSubjects(scheme, semesterIndex, semesterName) {
+                const subjects = [
+                    `Subject 1`, `Subject 2`, `Subject 3`, `Subject 4`,
+                    `Subject 5`, `Subject 6`, `Subject 7`, `Subject 8`
+                ];
+                const subjectSection = document.getElementById('subject-section');
+                subjectSection.innerHTML = `<h2>${semesterName} - ${scheme}</h2>`;
+
+                // Create and append subject buttons
+                subjects.forEach((subject, index) => {
+                    const link = document.createElement('a');
+                    link.className = 'subject-link';
+                    link.href = `${scheme}-${semesterIndex}-${index + 1}.html`; // Link to the respective subject page
+                    link.target = '_blank'; // Open in a new tab
+                    const button = document.createElement('button');
+                    button.className = 'subject-button';
+                    button.innerHTML = subject;
+                    button.onclick = () => alert(`Redirect to ${subject} of ${semesterName}`);
+                    subjectSection.appendChild(button);
+                });
+
+                // Scroll to the subject section
+                subjectSection.scrollIntoView({ behavior: 'smooth' });
             }
         </script>
     </main>
