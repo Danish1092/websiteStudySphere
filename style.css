@@ -117,6 +117,114 @@ nav ul li a:hover {
     display: block;
 }
 
+/* Container for the main content */
+.main-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+    margin-top: 6%;
+    margin-bottom: 20px;
+}
+
+/* Styling for the content inside the container */
+.content h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Styling for the selection button container */
+.selection-button {
+    margin-bottom: 20px;
+}
+
+/* Styling for the select dropdown */
+.selection-button select {
+    padding: 10px;
+    font-size: 16px;
+    width: 80%;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Container for semester buttons */
+.semester-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Styling for each semester button */
+.semester-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    background-color: rgb(157, 90, 219);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    width: 45%;
+    max-width: 200px;
+    margin: 5px 0;
+}
+
+/* Hover effect for the semester buttons */
+.semester-button:hover {
+    background-color: rgb(143, 34, 245);
+    transform: translateY(-5px);
+}
+
+/* Styling for the subject section */
+.subject-section {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+/* Title for the subject section */
+.subject-section h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #333;
+}
+
+/* Styling for each subject button */
+.subject-button {
+    padding: 15px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.3s, background-color 0.3s;
+    width: 30%;
+    max-width: 250px;
+}
+
+/* Hover effect for the subject buttons */
+.subject-button:hover {
+    background-color: #0068d8;
+    transform: translateY(-5px);
+}
+
 /* Hamburger menu styles */
 .hamburger-menu {
     display: none;
