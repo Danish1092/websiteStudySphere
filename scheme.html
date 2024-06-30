@@ -15,7 +15,7 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    
+
 </head>
 
 <body>
@@ -41,7 +41,7 @@
     <main>
         <div class="main-container">
             <div class="content">
-                <h1>Select Syllabus <span class="purple">Scheme</span></h1>
+                <h1>Select Syllabus <span class="purple">Scheme</h1>
                 <div class="selection-button">
                     <select id="syllabus-scheme" onchange="showSemesters()">
                         <option value="" disabled selected>Select Scheme</option>
@@ -58,9 +58,18 @@
         <div id="subject-section" class="subject-section"></div>
 
         <script>
+            const semesterSubjects = {
+                'Semester 1': ['Subject 1', 'Subject 2', 'Subject 3'],
+                'Semester 2': ['Subject 1', 'Subject 2', 'Subject 3', 'Subject 4'],
+                'Semester 3': ['Subject 1', 'Subject 2', 'Subject 3', 'Subject 4', 'Subject 5'],
+                'Semester 4': ['Subject 1', 'Subject 2'],
+                'Semester 5': ['Subject 1', 'Subject 2', 'Subject 3', 'Subject 4', 'Subject 5', 'Subject 6'],
+                'Semester 6': ['Subject 1', 'Subject 2', 'Subject 3', 'Subject 4', 'Subject 5', 'Subject 6', 'Subject 7']
+            };
+
             function showSemesters() {
                 const scheme = document.getElementById('syllabus-scheme').value;
-                const semesters = ['Semester 1', 'Semester 2', 'Semester 3', 'Semester 4', 'Semester 5', 'Semester 6'];
+                const semesters = Object.keys(semesterSubjects);
                 const container = document.getElementById('semester-buttons');
                 const subjectSection = document.getElementById('subject-section');
 
@@ -69,20 +78,17 @@
                 subjectSection.innerHTML = '';
 
                 // Create and append buttons for each semester
-                semesters.forEach((semester, index) => {
+                semesters.forEach((semester) => {
                     const button = document.createElement('button');
                     button.className = 'semester-button';
                     button.innerHTML = semester;
-                    button.onclick = () => showSubjects(scheme, index + 1, semester);
+                    button.onclick = () => showSubjects(scheme, semester);
                     container.appendChild(button);
                 });
             }
 
-            function showSubjects(scheme, semesterIndex, semesterName) {
-                const subjects = [
-                    `Subject 1`, `Subject 2`, `Subject 3`, `Subject 4`,
-                    `Subject 5`, `Subject 6`, `Subject 7`, `Subject 8`
-                ];
+            function showSubjects(scheme, semesterName) {
+                const subjects = semesterSubjects[semesterName];
                 const subjectSection = document.getElementById('subject-section');
                 subjectSection.innerHTML = `<h2>${semesterName} - ${scheme}</h2>`;
 
@@ -90,13 +96,14 @@
                 subjects.forEach((subject, index) => {
                     const link = document.createElement('a');
                     link.className = 'subject-link';
-                    link.href = `${scheme}-${semesterIndex}-${index + 1}.html`; // Link to the respective subject page
+                    link.href = `${scheme}-${semesterName}-${index + 1}.html`; // Link to the respective subject page
                     link.target = '_blank'; // Open in a new tab
                     const button = document.createElement('button');
                     button.className = 'subject-button';
                     button.innerHTML = subject;
                     button.onclick = () => alert(`Redirect to ${subject} of ${semesterName}`);
-                    subjectSection.appendChild(button);
+                    subjectSection.appendChild(link);
+                    link.appendChild(button);
                 });
 
                 // Scroll to the subject section
