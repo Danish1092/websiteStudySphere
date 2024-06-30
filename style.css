@@ -62,7 +62,7 @@ nav ul li a:hover {
     margin: 80px 0;
 }
 
-.firstsection > div {
+.firstsection>div {
     width: 30%;
 }
 
@@ -236,6 +236,7 @@ nav ul li a:hover {
     .hamburger-menu {
         display: block;
     }
+
     nav .right ul {
         display: none;
         flex-direction: column;
@@ -247,9 +248,11 @@ nav ul li a:hover {
         padding: 10px;
         border-radius: 6px;
     }
+
     nav .right ul.show {
         display: flex;
     }
+
     nav .right ul li {
         margin: 10px 0;
     }
