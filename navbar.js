@@ -6,3 +6,4 @@ var typed = new Typed('#element', {
     strings: ['Empower', 'Success', 'with best notes'],
     typeSpeed: 50,
 });
+

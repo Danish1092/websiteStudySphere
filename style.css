@@ -34,14 +34,15 @@ nav ul li {
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
+    text-decoration:none;
+    color: rgb(11, 11, 11);
 }
 
 nav ul li a:hover {
     color: rgb(137, 137, 240);
     font-size: 1.26rem;
 }
+
 
 .left {
     font-size: 2rem;
@@ -111,6 +112,7 @@ nav ul li a:hover {
 
 .dropdown-menu a:hover {
     background-color: #555;
+
 }
 
 .navbar-item.dropdown:hover .dropdown-menu {
