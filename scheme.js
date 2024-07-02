@@ -37,7 +37,7 @@ function showSubjects(scheme, semesterName) {
     subjects.forEach((subject, index) => {
         const link = document.createElement('a');
         link.className = 'subject-link';
-        link.href = `${scheme}-${semesterName}-${index + 1}.html`; // Link to the respective subject page
+        link.href = `/semester-1/`; // Generate a unique href for each subject
         link.target = '_blank'; // Open in a new tab
         const button = document.createElement('button');
         button.className = 'subject-button';
