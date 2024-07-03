@@ -8,7 +8,7 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         crossorigin="anonymous" />
-    <title>StudySphere - Scheme</title>
+    <title>StudySphere - Mathematics-I for CSE</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -40,29 +40,20 @@
             </div>
         </nav>
     </header>
-
     <main>
-        <div class="main-container">
-            <div class="content">
-                <h1>Select Syllabus <span class="purple">Scheme</h1>
-                <div class="selection-button">
-                    <select id="syllabus-scheme" onchange="showSemesters()">
-                        <option value="" disabled selected>Select Scheme</option>
-                        <option value="Scheme-2022">2022 Scheme</option>
-                    </select>
-                </div>
-
-                <!-- Section where semester buttons will appear -->
-                <div id="semester-buttons" class="semester-buttons"></div>
+        <div class="notes-container">
+            <div class="text-box">
+                <p>This is where you can grab your notes. Click below to download or preview your notes.</p>
+            </div>
+            <div class="buttons">
+                <button onclick="downloadNotes()">Download Notes</button>
+                <button onclick="previewNotes()">Preview Notes</button>
             </div>
         </div>
-
-        <!-- Section where subjects will appear -->
-        <div id="subject-section" class="subject-section"></div>
-
     </main>
-    <script src="scheme.js"></script>
+    <script src="submod.js"></script>
     <script src="navbar.js"></script>
+
 
 </body>
 
