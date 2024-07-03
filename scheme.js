@@ -1,4 +1,3 @@
-
 const semesterSubjects = {
     'Semester 1': ['Subject 1', 'Subject 2', 'Subject 3'],
     'Semester 2': ['Subject 1', 'Subject 2', 'Subject 3', 'Subject 4'],
@@ -34,17 +33,16 @@ function showSubjects(scheme, semesterName) {
     subjectSection.innerHTML = `<h2>${semesterName} - ${scheme}</h2>`;
 
     // Create and append subject buttons
-    subjects.forEach((subject, index) => {
+    subjects.forEach((subject) => {
         const link = document.createElement('a');
         link.className = 'subject-link';
-        link.href = `/semester-1/`; // Generate a unique href for each subject
+        link.href = `/subjects/${semesterName.toLowerCase().replace(/\s+/g, '-')}/${subject.replace(/\s+/g, '-').toLowerCase()}.html`;
         link.target = '_blank'; // Open in a new tab
         const button = document.createElement('button');
         button.className = 'subject-button';
         button.innerHTML = subject;
-        button.onclick = () => alert(`Redirect to ${subject} of ${semesterName}`);
-        subjectSection.appendChild(link);
         link.appendChild(button);
+        subjectSection.appendChild(link);
     });
 
     // Scroll to the subject section
