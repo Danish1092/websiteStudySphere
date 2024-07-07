@@ -1,5 +1,6 @@
 const semesterSubjects = {
-    'Semester 1 / Semester 2': ['BMATS101', 'BMATS201', 'BPHYS102-202', 'BCHES102-202','BPOPS103-203','BCEDK103-203','BESCK104A-204A','BESCK104C-204C','BESCK104D-204D','BESCK104E-204E','BETCK105E-205E','BETCK105F-205F','BETCK105H-205H','BETCK105I-205I','BENGK106-206','BPWSK106-206','BIDTK158-258','BICOK107-207','BSFHK158-258','BPLCK105B-205B'],
+    'Semester 1': ['BMATS101', 'BMATS201', 'BPHYS102-202', 'BCHES102-202','BPOPS103-203','BCEDK103-203','BESCK104A-204A','BESCK104C-204C','BESCK104D-204D','BESCK104E-204E','BETCK105E-205E','BETCK105F-205F','BETCK105H-205H','BETCK105I-205I','BENGK106-206','BPWSK106-206','BIDTK158-258','BICOK107-207','BSFHK158-258','BPLCK105B-205B'],
+    'Semester 2': ['Subject 1', 'Subject 2', 'Subject 3', 'Subject 4', 'Subject 5'],
     'Semester 3': ['Subject 1', 'Subject 2', 'Subject 3', 'Subject 4', 'Subject 5'],
     'Semester 4': ['Subject 1', 'Subject 2'],
     'Semester 5': ['Subject 1', 'Subject 2', 'Subject 3', 'Subject 4', 'Subject 5', 'Subject 6'],
