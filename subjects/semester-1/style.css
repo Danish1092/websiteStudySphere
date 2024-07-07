@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;700&display=swap');
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color: rgb(185, 135, 231);
+    --accent-color-dark: rgb(131, 85, 174);
+    --padding-inline-section: 20px
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-text-color);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    color: var(--secondary-text-color);
+    line-height: 1.8rem;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
+
+}
+
+/* utility classes */
+
+.small-bold-text {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1180px;
+    margin-inline: auto;
+    padding-inline: var(--padding-inline-section);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.hover-link {
+    color: var(--primary-text-color);
+}
+
+.hover-link:hover {
+    color: var(--accent-color);
+    transition: 0.2s ease-out;
+}
+
+.primary-button{
+    background-color: var(--accent-color);
+    border-radius: 6px;
+    font-weight: 700;
+    color: white !important;
+    padding: 12px 24px;
+    box-shadow: 0 0 2px var(--secondary-text-color);
+    transition: 0.2s ease-out;
+
+}
+
+.primary-button:hover {
+    background-color: var(--accent-color-dark);
+    transition: 0.2s ease-out;
+}
+/* top banner*/
+
+.top-banner {
+    background-image: url('./images/top-banner.jpeg');
+    background-color: rgb(198, 138, 254);
+    background-size: 1600px;
+
+}
+
+.banner-text {
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+
+}
+
+/* nav bar*/
+
+.main-nav {
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.ourlogo img {
+    width: 330px;
+}
+
+.logo-name {
+    margin-inline-end: auto;
+}
+
+.purple {
+    color: rgb(108, 15, 196);
+    font-weight: 700;
+}
+
+.nav-links {
+    flex-basis: 730px;
+}
+
+.nav-links ul {
+    justify-content: end;
+    gap: 40px;
+}
+
+/* header section */
+
+header {
+    padding: 50px var(--padding-inline-section) 0;
+}
+
+.header-section {
+    justify-content: center;
+    gap: 50px;
+}
+
+.header-left {
+    max-width: 40vw;
+}
+
+.header-left h1{
+    margin-top: 10px;
+    font-size: 2.2rem;
+}
+
+.get-started-btn{
+    margin-top: 20px;
+}
+
+.header-right img {
+    width: 650px;
+}
+
+/* big feature section */
+
+.big-feature-section {
+    padding: 30px var(--padding-inline-section);
+    margin-top: 5%;
+}
+
+.big-feature-container{
+    gap: 30px;
+}
+
+.feature-img img{
+    width: 500px;
+}
+
+.feature-desc{
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Scheme.html section*/
+/* Dropdown menu styles */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    padding: 10px 0;
+    margin: 0;
+    list-style-type: none;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-menu li {
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: #555;
+
+}
+
+.navbar-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
