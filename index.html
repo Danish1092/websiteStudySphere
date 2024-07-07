@@ -4,72 +4,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-        crossorigin="anonymous" />
-    <title>StudySphere</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-        
+    <title>VTUChamp</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="left"><a href="/index.html">Study<span class="purple">S</span>phere</a></div>
-            <div class="right">
-                <ul>
-                    <li><a href="/index.html">Home</a></li>
-                    <li class="navbar-item dropdown">
-                        <a href="#">Scheme</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="scheme.html">2022 Scheme</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/">Contact Us</a></li>
+    <div class="top-banner">
+        <div class="container">
+            <div class="small-bold-text banner-text">Hii 🙃, Scholars! Grab our best notes and ace your classes with
+                ease!</div>
+        </div>
+    </div>
+
+    <!--nav bar-->
+    <nav>
+        <div class="container main-nav flex">
+            <a href="/index.html" class="ourlogo">
+                <img src="./images/main-logo-2.png" alt="logo">
+            </a>
+            <div class="nav-links">
+                <ul class="flex">
+                    <li><a href="/scheme.html" class="hover-link primary-button">Scheme</a></li>
+                    <li><a href="/scheme.html" class="hover-link">Resources</a></li>
+                    <li><a href="#" class="hover-link">About us</a></li>
+                    <li><a href="#" class="hover-link">Contact</a></li>
                 </ul>
             </div>
-            <div class="hamburger-menu">
-                <i class="fa fa-bars"></i>
+        </div>
+        <div class="hamburger-menu">
+            <i class="fa fa-bars"></i>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container header-section flex">
+            <div class="header-left">
+                <h1>Access Organized Notes</h1>
+                <p><span class="purple">VTUChamp</span> is a remote library platform that</p>
+                <p>delivers comprehensive notes tailored for engineering excellence accessible anytime</p>
+                <p>and anywhere</p>
+                <a href="/scheme.html" class="primary-button get-started-btn">Get Started</a>
             </div>
-        </nav>
+
+            <div class="header-right">
+                <img src="./images/clgstudentsvector.avif" alt="hero-image">
+            </div>
+        </div>
     </header>
 
-    <main>
-        <section class="firstsection">
-            <div class="leftsection">
-                Access <span class="purple">Organized</span> notes across various subjects,
-                <div></div>
-                <span id="element"></span>
-                <div></div>
-                <div class="btn">
-                    <a href="scheme.html">
-                        <button style="padding: 12px;
-                        background-color: rgb(249, 249, 249);
-                        color: black;
-                        border: 2px solid black;
-                        border-radius: 6px;
-                        font-style: bold;
-                        font-size: 20px;
-                        margin:0 20px 0 0;
-                        cursor: pointer;
-                        transition: background-color 0.3s ease;">Get Started</button>
-                    </a>
-                </div>
+
+    <section class="big-feature-section">
+        <div class="container flex big-feature-container">
+            <div class="feature-img flex">
+                <img src="./images/featureimg2.jpg" alt="feature-image">
             </div>
-            <div class="rightsection">
-                <img src="clgstudents.webp" alt="">
+            <div class="feature-desc flex">
+                <h3>Upcoming Features on this platform</h3>
+                <h3>Get ready for a revolution in note-taking!</h3>
+                <p>StudySphere will be powered by AI to effortlessly extract and organize notes from your PDFs,
+                    documents, and more. Stay tuned for smarter, faster studying!</p>
             </div>
-        </section>
-    </main>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        </div>
+    </section>
+
+    <section class="examples-section"></section>
+
+    <!-- cta section -->
+    <section class="cta-section">
+        <div class="container flex cta-section-container">
+            <h2>Check out our upcoming platform</h2>
+            <p>Glance at the AI tools in this modern Era</p>
+            <a href="#" class="primary-button">Get Started</a>
+        </div>
+    </section>
+
+    <!--footer-->
+    <footer>
+        <div class="container flex footer-container">
+            <a href="#" class="ourlogo">
+                <img src="./images/footer-logo.png" alt="logo">
+            </a>
+            <div class="link-column flex">
+                <h4>Scheme</h4>
+                <a class="hover-link" href="#">Overview</a>
+                <a class="hover-link" href="#">Overview</a>
+                <a class="hover-link" href="#">Overview</a>
+                <a class="hover-link" href="#">Overview</a>
+            </div>
+            <div class="link-column flex">
+                <h4>Resources</h4>
+                <a class="hover-link" href="#">Overview</a>
+                <a class="hover-link" href="#">Overview</a>
+                <a class="hover-link" href="#">Overview</a>
+                <a class="hover-link" href="#">Overview</a>
+            </div>
+            <div class="link-column flex">
+                <h4>Resources</h4>
+                <a class="hover-link" href="#">Overview</a>
+                <a class="hover-link" href="#">Overview</a>
+                <a class="hover-link" href="#">Overview</a>
+                <a class="hover-link" href="#">Overview</a>
+            </div>
+        </div>
+    </footer>
+
+    <!--sub footer-->
+    <div class="subfooter">
+        <div class="container flex subfooter-container">
+            <a class="hover-link" href="#">Privacy policy</a>
+            <a class="hover-link" href="#">Terms & Condition</a>
+            <a class="hover-link" href="#">Security Information</a>
+            <a class="hover-link" href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a class="hover-link" href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/6024a02b82.js" crossorigin="anonymous"></script>
     <script src="navbar.js"></script>
 </body>
 
