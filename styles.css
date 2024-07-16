@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;700&display=swap');
+
+.top-banner {
+    background-image: url('./images/top-banner.jpeg');
+    background-color: rgb(198, 138, 254);
+    background-size: 1600px;
+}
+
+.banner-text {
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+}
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color: rgb(157, 90, 219);
+    --accent-color-dark: rgb(143, 34, 245);
+    --padding-inline-section: 20px
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-text-color);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    color: var(--secondary-text-color);
+    line-height: 1.8rem;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
+}
+
+.small-bold-text {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1180px;
+    margin-inline: auto;
+    padding-inline: var(--padding-inline-section);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.hover-link {
+    color: var(--primary-text-color);
+}
+
+.hover-link:hover {
+    color: var(--accent-color);
+    transition: 0.2s ease-out;
+}
+
+.primary-button{
+    background-color: var(--accent-color);
+    border-radius: 6px;
+    font-weight: 700;
+    color: white !important;
+    padding: 12px 24px;
+    box-shadow: 0 0 2px var(--secondary-text-color);
+    transition: 0.2s ease-out;
+}
+
+.primary-button:hover {
+    background-color: var(--accent-color-dark);
+    transition: 0.2s ease-out;
+}
+
+/* nav bar */
+.main-nav {
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.ourlogo img {
+    width: 330px;
+}
+
+.logo-name {
+    margin-inline-end: auto;
+}
+
+.purple {
+    color: rgb(108, 15, 196);
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links ul {
+    justify-content: end;
+    gap: 40px;
+}
+
+.nav-links li a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+}
+
+header {
+    padding: 50px var(--padding-inline-section) 0;
+}
+
+.header-section {
+    justify-content: center;
+    gap: 50px;
+}
+
+.header-left {
+    max-width: 40vw;
+}
+
+.header-left h1{
+    margin-top: 10px;
+    font-size: 2.2rem;
+}
+
+.get-started-btn{
+    margin-top: 20px;
+}
+
+.header-right img {
+    width: 650px;
+}
+
+/* Hamburger menu styles */
+.hamburger-menu {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* for mobile devices ranging 768px */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: rgb(250, 250, 250);
+        border: 1px solid #7d7a7a;
+        border-radius: 4px;
+        padding: 10px;
+        border-radius: 6px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links ul li {
+        margin: 10px 0;
+    }
+
+    .nav-links ul li a {
+        color: black;
+    }
+
+    .ourlogo img {
+        max-width: 250px;
+    }
+
+    .header-right img {
+        width: 0px;
+    }
+
+    .header-section {
+        justify-content:flex-start;
+        gap: 40px;
+    }
+
+    .header-left {
+        max-width: 300vh;
+    }
+
+    .feature-img img {
+        max-width:0cqmin;
+    }
+
+    .big-feature-section{
+        flex-direction: column;
+        max-width: 1000px;
+        align-items: center;
+    }
+
+    .footer-logo img {
+        max-width: 220px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        justify-content:center;
+    }
+
+    .link-column {
+        width: 100%;
+        text-align:center;
+        margin-top: 20px;
+    }
+
+    .subfooter-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .subfooter-container a {
+        margin: 5px 0;
+    }
+    
+}
+
+/* for tablets and 768px and 1024 devices */
+@media (min-width: 768px) and (max-width: 1023px) {
+    footer{
+        padding-block : 80px; 
+        background-color: #ebf2f2;
+    }
+    
+    .link-column {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    
+    .footer-container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    
+    .footer-logo img {
+        width: 260px;
+    }
+    
+    /* sub footer */
+    
+    .subfooter{
+        background-color: #b9cde4;
+        padding: var(--padding-inline-section)
+    }
+    
+    .subfooter-container {
+        justify-content: center;
+        gap: 30px;
+    }
+}
+
+/* big feature section */
+
+.big-feature-section {
+    padding: 30px var(--padding-inline-section);
+    margin-top: 5%;
+}
+
+.big-feature-container {
+    gap: 30px;
+}
+
+.feature-img img {
+    width: 500px;
+}
+
+.feature-desc {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* cta-section */
+
+.cta-section-container {
+    flex-direction: column;
+    gap: 30px;
+    color: white;
+}
+
+.cta-section {
+    padding: 120px var(--padding-inline-section) 80px;
+    background-color: rgb(207, 207, 211);
+}
+
+.cta-section-container p {
+    color: white;
+    margin-top: 20px;
+}
+
+/* footer */
+
+footer{
+    padding-block : 80px; 
+    background-color: #ebf2f2;
+}
+
+.link-column {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.footer-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.footer-logo img {
+    width: 260px;
+}
+
+/* sub footer */
+
+.subfooter{
+    background-color: #b9cde4;
+    padding: var(--padding-inline-section)
+}
+
+.subfooter-container {
+    justify-content: center;
+    gap: 30px;
+}
+
+
+/* scheme.html specific styles */
+
+/* Container for the main content */
+.main-container {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+    margin-top: 6%;
+    margin-bottom: 20px;
+}
+
+/* Styling for the content inside the container */
+.content h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Styling for selection button inside the container */
+.selection-button a{
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    background-color: rgb(157, 90, 219);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    width: 45%;
+    max-width: 200px;
+    margin: 5px 0;
+}
+
+
+/* Hover effect for the selection buttons */
+.selection-button a:hover {
+    background-color: rgb(143, 34, 245);
+    transform: translateY(-2px);
+}
+
+
+/* Styling for the subject section */
+.subject-section {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+/* Title for the subject section */
+.subject-section h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #333;
+}
+
+/* Styling for each subject button */
+.subject-button {
+    padding: 15px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.3s, background-color 0.3s;
+    width: 100%;
+    max-width: 250px;
+}
+
+/* Hover effect for the subject buttons */
+.subject-button:hover {
+    background-color: #0068d8;
+    transform: translateY(-5px);
+}
+
+    

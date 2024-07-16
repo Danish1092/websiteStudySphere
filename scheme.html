@@ -5,17 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VTUChamp - Scheme</title>
-    <link rel="stylesheet" href="common.css">
-    <link rel="stylesheet" href="scheme.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="top-banner">
-        <div class="container">
-            <div class="small-bold-text banner-text">Hii 🙃, Scholars! Grab our best notes and ace your classes with
-                ease!</div>
-        </div>
-    </div>
 
     <!--nav bar-->
     <nav>
@@ -27,8 +20,8 @@
                 <ul class="flex">
                     <li><a href="/scheme.html" class="hover-link primary-button">Scheme</a></li>
                     <li><a href="/scheme.html" class="hover-link">Resources</a></li>
+                    <li><a href="#" class="hover-link">Projects</a></li>
                     <li><a href="#" class="hover-link">About us</a></li>
-                    <li><a href="#" class="hover-link">Contact</a></li>
                 </ul>
             </div>
             <div class="hamburger-menu">
@@ -42,23 +35,56 @@
             <div class="content">
                 <h1>Select Syllabus <span class="purple">Scheme</span></h1>
                 <div class="selection-button">
-                    <select id="syllabus-scheme" onchange="showSemesters()">
-                        <option value="" disabled selected>Select Scheme</option>
-                        <option value="Scheme-2022">2022 Scheme</option>
-                    </select>
+                    <a href="/scheme.html">Button 1</a>
+                    <a href="/scheme.html">Button 2</a>
                 </div>
+            </div>
+    </main>
 
-                <!-- Section where semester buttons will appear -->
-                <div id="semester-buttons" class="semester-buttons"></div>
+    <!--footer-->
+    <footer>
+        <div class="container flex footer-container">
+            <a href="#" class="footer-logo">
+                <img src="./images/footer-logo.png" alt="logo">
+            </a>
+            <div class="link-column flex">
+                <h4>Scheme</h4>
+                <a class="hover-link" href="#">Overview</a>
+                <a class="hover-link" href="#">Overview</a>
+                <a class="hover-link" href="#">Overview</a>
+                <a class="hover-link" href="#">Overview</a>
+            </div>
+            <div class="link-column flex">
+                <h4>Resources</h4>
+                <a class="hover-link" href="#">Overview</a>
+                <a class="hover-link" href="#">Overview</a>
+                <a class="hover-link" href="#">Overview</a>
+                <a class="hover-link" href="#">Overview</a>
+            </div>
+            <div class="link-column flex">
+                <h4>Projects</h4>
+                <a class="hover-link" href="#">Overview</a>
+                <a class="hover-link" href="#">Overview</a>
+                <a class="hover-link" href="#">Overview</a>
+                <a class="hover-link" href="#">Overview</a>
             </div>
         </div>
+    </footer>
 
-        <!-- Section where subjects will appear -->
-        <div id="subject-section" class="subject-section"></div>
-
-    </main>
-    <script src="scheme.js"></script>
+    <!--sub footer-->
+    <div class="subfooter">
+        <div class="container flex subfooter-container">
+            <a class="hover-link" href="#">Privacy policy</a>
+            <a class="hover-link" href="#">Terms & Condition</a>
+            <a class="hover-link" href="#">Security Information</a>
+            <a class="hover-link" href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a class="hover-link" href="#"><i class="fa-brands fa-x"></i></a>
+            <a class="hover-link" href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/6024a02b82.js" crossorigin="anonymous"></script>
     <script src="navbar.js"></script>
+    <script src="scheme.js"></script>
 
 </body>
 
